@@ -30,4 +30,5 @@ conn.addListener("error", (err) => {
   console.error("Database connection error:", err);
 });
 
+// @ts-ignore
 export const db = drizzle(conn, { schema });
