@@ -21,6 +21,7 @@ export default function DriveContents(props: {
     let currentId = currentFolder;
 
     while (currentId !== 1) {
+      //   @ts-expect-error
       const folder = props.folders.find((folder) => folder.id === currentId);
       if (folder) {
         breadcrumbs.unshift(folder);
@@ -79,18 +80,24 @@ export default function DriveContents(props: {
             </div>
           </div>
           <ul>
-            {props.folders.map((folder) => (
-              <FolderRow
-                key={folder.id}
-                handleFolderClick={() => {
-                  handleFolderClick(folder.id);
-                }}
-                folder={folder}
-              />
-            ))}
-            {props.files.map((file) => (
-              <FileRow key={file.id} file={file} />
-            ))}
+            {
+              //   @ts-expect-error
+              props.folders.map((folder) => (
+                <FolderRow
+                  key={folder.id}
+                  handleFolderClick={() => {
+                    handleFolderClick(folder.id);
+                  }}
+                  folder={folder}
+                />
+              ))
+            }
+            {
+              //   @ts-expect-error
+              props.files.map((file) => (
+                <FileRow key={file.id} file={file} />
+              ))
+            }
           </ul>
         </div>
       </div>
