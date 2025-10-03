@@ -35,6 +35,8 @@ export const files_table = createTable(
   },
 );
 
+// export file type here
+
 export const folders_table = createTable(
   "folders_table",
   {
@@ -48,3 +50,5 @@ export const folders_table = createTable(
     return [index("parent_index").on(t.parent)];
   },
 );
+
+// export folder type here

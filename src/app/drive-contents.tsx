@@ -19,9 +19,7 @@ export default function DriveContents(props: {
   folders: typeof folders_table.$inferSelect;
   parents: typeof folders_table.$inferSelect;
 }) {
-  const handleUpload = () => {
-    alert("Upload functionality would be implemented here");
-  };
+  // add navigate here from next navigation
 
   return (
     <div className="min-h-screen bg-gray-900 p-8 text-gray-100">
@@ -80,6 +78,7 @@ export default function DriveContents(props: {
             }
           </ul>
         </div>
+        {/* Add UploadButton here with endpoint and onClientUploadComplete props */}
       </div>
     </div>
   );

@@ -40,3 +40,6 @@ export const QUERIES = {
       .where(eq(filesSchema.parent, folderId));
   },
 };
+
+// add MUTATIONS here
+// createFile
