@@ -13,5 +13,5 @@ export default {
     database: env.SINGLESTORE_DB_NAME,
     ssl: {},
   },
-  tablesFilter: ["drive_tutorial_*"],
+  //   tablesFilter: ["drive_tutorial_*"],
 } satisfies Config;

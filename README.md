@@ -10,7 +10,8 @@
 
 ## 10-03-2025
 
-- [ ] Real home page
+- [ ] Add "ownership" to files and folders
 - [ ] Upload files to the right folder
 - [ ] Delete files button
 - [ ] Allow files that aren't images to be uploaded
+- [ ] Real home page

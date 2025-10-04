@@ -4,10 +4,9 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 
-// update the metadata
 export const metadata: Metadata = {
   title: "Google Drive Clone",
-  description: "It's like Google Drive, but...",
+  description: "It's like Google Drive, but worse! :D",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
