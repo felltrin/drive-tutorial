@@ -1,7 +1,7 @@
 import React from "react";
 import { db } from "~/server/db";
-import { mockFiles, mockFolders } from "~/lib/mock-data";
-import { files_table, folders_table } from "~/server/db/schema";
+import { mockFolders } from "~/lib/mock-data";
+import { folders_table } from "~/server/db/schema";
 import { auth } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
 
