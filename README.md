@@ -12,7 +12,7 @@
 
 ## Next Steps
 
-### Folder Deletion
+### Folder Deletion - [x]
 
 Make sure you fetch all of the folders that have it as a parent, and their children too
 
