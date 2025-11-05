@@ -63,8 +63,8 @@ export async function deleteFolder(folderId: number) {
     return { error: "Selected folder not found" };
   }
 
-  const folderIdsToDelete = [];
-  const fileIdsToDelete = [];
+  const folderIdsToDelete: number[] = [];
+  const fileIdsToDelete: number[] = [];
 
   async function gatherFileIds(newFolder: {
     id: number;
