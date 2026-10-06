@@ -1,3 +1,4 @@
+"use client";
 import { SignInButton } from "@clerk/nextjs";
 
 // @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
