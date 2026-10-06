@@ -15,9 +15,9 @@ import { UploadButton } from "~/components/uploadthing";
 import { useRouter } from "next/navigation";
 
 export default function DriveContents(props: {
-  files: typeof files_table.$inferSelect;
-  folders: typeof folders_table.$inferSelect;
-  parents: typeof folders_table.$inferSelect;
+  files: (typeof files_table.$inferSelect)[];
+  folders: (typeof folders_table.$inferSelect)[];
+  parents: (typeof folders_table.$inferSelect)[];
 
   currentFolderId: number;
 }) {
@@ -67,18 +67,12 @@ export default function DriveContents(props: {
             </div>
           </div>
           <ul>
-            {
-              //   @ts-expect-error
-              props.folders.map((folder) => (
-                <FolderRow key={folder.id} folder={folder} />
-              ))
-            }
-            {
-              //   @ts-expect-error
-              props.files.map((file) => (
-                <FileRow key={file.id} file={file} />
-              ))
-            }
+            {props.folders.map((folder) => (
+              <FolderRow key={folder.id} folder={folder} />
+            ))}
+            {props.files.map((file) => (
+              <FileRow key={file.id} file={file} />
+            ))}
           </ul>
         </div>
         <UploadButton
