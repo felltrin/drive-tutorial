@@ -13,6 +13,7 @@ const config = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  cacheComponents: true,
 };
 
 export default config;

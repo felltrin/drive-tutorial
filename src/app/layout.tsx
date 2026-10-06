@@ -5,6 +5,11 @@ import { Geist } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { PostHogProvider } from "./_providers/posthog-providers";
 
+// @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
+// Remove this opt-out after verifying the segment passes validation without it.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+export const instant = false;
+
 export const metadata: Metadata = {
   title: "Google Drive Clone",
   description: "It's like Google Drive, but worse! :D",
