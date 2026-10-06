@@ -11,7 +11,7 @@ import { PostHogProvider } from "./_providers/posthog-providers";
 export const instant = false;
 
 export const metadata: Metadata = {
-  title: "Google Drive Clone",
+  title: "f3 Drive",
   description: "It's like Google Drive, but worse! :D",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

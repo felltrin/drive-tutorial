@@ -1,6 +1,7 @@
-"use client";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
+import { FooterDate } from "~/components/footerComp";
 import { Button } from "~/components/ui/button";
 
 // @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
@@ -38,9 +39,13 @@ export default function HomePage() {
           Get Started
         </Button>
       </form>
-      <footer className="mt-16 text-sm text-neutral-500">
-        © {new Date().getFullYear()} f3 Drive. All rights reserved.
-      </footer>
+      <Suspense
+        fallback={
+          <footer className="mt-16 text-sm text-neutral-500">Loading...</footer>
+        }
+      >
+        <FooterDate />
+      </Suspense>
     </>
   );
 }
