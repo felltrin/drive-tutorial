@@ -30,6 +30,7 @@ export const ourFileRouter = {
       const user = await auth();
 
       // If you throw, the user will not be able to upload
+      // eslint-disable-next-line @typescript-eslint/only-throw-error
       if (!user.userId) throw new UploadThingError("Unauthorized");
 
       const folder = await QUERIES.getFolderById(input.folderId);
@@ -37,6 +38,7 @@ export const ourFileRouter = {
       if (!folder) throw new Error("Folder not found");
 
       if (folder.ownerId !== user.userId)
+        // eslint-disable-next-line @typescript-eslint/only-throw-error
         throw new UploadThingError("Unauthorized");
 
       // Whatever is returned here is accessible in onUploadComplete as `metadata`

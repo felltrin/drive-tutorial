@@ -101,17 +101,17 @@ export async function deleteFolder(folderId: number) {
       ) {
         return;
       } else if (folders === undefined || folders.length === 0) {
-        for (let i = 0; i < files.length; i++) {
-          fileIdsToDelete.push(files[i]!.id);
+        for (const file of files) {
+          fileIdsToDelete.push(file.id);
         }
         return;
       } else {
-        for (let i = 0; i < files.length; i++) {
-          fileIdsToDelete.push(files[i]!.id);
+        for (const file of files) {
+          fileIdsToDelete.push(file.id);
         }
-        for (let i = 0; i < folders.length; i++) {
-          folderIdsToDelete.push(folders[i]!.id);
-          await gatherFileIds(folders[i]!);
+        for (const folder of folders) {
+          folderIdsToDelete.push(folder.id);
+          await gatherFileIds(folder);
         }
       }
     }
