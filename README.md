@@ -2,13 +2,12 @@
 
 ## TODO
 
-- [x] Set up database and data model
-- [x] Move foler open state to URL
-- [x] Add auth
-- [x] Add file uploading
-- [x] Add analytics
-- [x] Add delete button
-- [x] Real homepage + onboarding
+- [x] Folder Deletion
+- [ ] Folder creation
+- [ ] Access control
+- [ ] Make a "file view" page
+- [ ] Toasts!
+- [ ] Gray out a row while it's being deleted
 
 ## Next Steps
 
@@ -23,9 +22,3 @@ Make a server action that takes a name and parentId, and creates a folder with t
 ### Access Control
 
 Check if user is owner before showing the folder page.
-
-### Make a "file view" page
-
-### Toasts!
-
-### Gray out a row while it's being deleted
